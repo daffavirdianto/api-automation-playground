@@ -48,7 +48,7 @@ public class UserStepDefinitions  {
         Assert.assertEquals(response.jsonPath().getString("message"), "User exists!");
     }
 
-     @When("I send an update account request with:")
+    @When("I send an update account request with:")
     public void sendUpdatedAccountRequest(DataTable dataTable) {
         Map<String, String> userData = dataTable.asMap(String.class, String.class);
 

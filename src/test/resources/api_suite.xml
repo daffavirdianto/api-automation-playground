@@ -1,0 +1,10 @@
+<suite name="APISuite" verbose="5" parallel="true" thread-count="5">
+  <test name="API Tests">
+    <classes>
+      <class name="restassured.RegisterUserTest"/>
+      <class name="restassured.LoginTest"/>
+      <class name="restassured.ProductTest"/>
+      <class name="restassured.UserDetailTest"/>
+    </classes>
+  </test>
+</suite>

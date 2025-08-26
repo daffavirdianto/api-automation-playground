@@ -20,7 +20,7 @@ public class LoginTest {
     public void testRegisterUser() {
         Response response = RestAssured.given()
                 .multiPart("name", "Daffa Virdianto")
-                .multiPart("email", "daffa.virdianto@gmail.com")
+                .multiPart("email", "daffa.virdianto1@gmail.com")
                 .multiPart("password", "securepassword123")
                 .multiPart("firstname", "Daffa")
                 .multiPart("lastname", "Virdianto")
@@ -42,7 +42,7 @@ public class LoginTest {
     public void validCredentials() {
 
         Response response = RestAssured.given()
-                .multiPart("email", "daffa.virdianto@gmail.com")
+                .multiPart("email", "daffa.virdianto1@gmail.com")
                 .multiPart("password", "securepassword123")
                 .log().all()
                 .when()
@@ -76,16 +76,16 @@ public class LoginTest {
     @DataProvider(name = "invalidCredentialsData")
     public Object[][] invalidCredentialsData() {
         return new Object[][] {
-            {"daffa.virdianto1@gmail.com","securepassword123", 404, "User not found!"},
-            {"daffa.virdianto@gmail.com","securepassword", 404, "User not found!"},
-            {"daffa.virdianto@gmail.com", "", 404, "User not found!"},
+            {"daffa.virdianto2@gmail.com","securepassword123", 404, "User not found!"},
+            {"daffa.virdianto2@gmail.com","securepassword", 404, "User not found!"},
+            {"daffa.virdianto2@gmail.com", "", 404, "User not found!"},
         };
     }
 
     @AfterClass
     public void tearDown() {
         RestAssured.given()
-                .multiPart("email", "daffa.virdianto@gmail.com")
+                .multiPart("email", "daffa.virdianto1@gmail.com")
                 .multiPart("password", "securepassword123")
                 .log().all()
                 .when()

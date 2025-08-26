@@ -18,7 +18,7 @@ Feature: Automation of user management
 
     Examples:
       | name            | email                     | password          | firstname | lastname  | company    | address1       | country   | zipcode | state     | city     | mobile_number |
-      | Daffa Virdianto | daffa.virdianto@gmail.com | securepassword123 | Daffa     | Virdianto | Playground | Jl. Raya No. 1 | Indonesia |   12345 | Indonesia | Semarang |   +1234567890 |
+      | Daffa Virdianto | daffa.virdianto1@gmail.com | securepassword123 | Daffa     | Virdianto | Playground | Jl. Raya No. 1 | Indonesia |   12345 | Indonesia | Semarang |   +1234567890 |
 
   Scenario Outline: Login with valid credentials
     When I send a login request with:
@@ -28,7 +28,7 @@ Feature: Automation of user management
 
     Examples:
       | email                     | password          |
-      | daffa.virdianto@gmail.com | securepassword123 |
+      | daffa.virdianto1@gmail.com | securepassword123 |
 
   Scenario Outline: Update user account information
     When I send an update account request with:
@@ -48,7 +48,7 @@ Feature: Automation of user management
 
     Examples:
       | name                | email                     | password          | firstname | lastname  | company    | address1       | country   | zipcode | state     | city     | mobile_number |
-      | Daffa Virdianto New | daffa.virdianto@gmail.com | securepassword123 | Daffa     | Virdianto | Playground | Jl. Raya No. 1 | Indonesia |   12345 | Indonesia | Semarang |   +1234567890 |
+      | Daffa Virdianto New | daffa.virdianto1@gmail.com | securepassword123 | Daffa     | Virdianto | Playground | Jl. Raya No. 1 | Indonesia |   12345 | Indonesia | Semarang |   +1234567890 |
 
   Scenario Outline: Get user details by email
     When I send a get user detail request with email "<email>"
@@ -56,7 +56,7 @@ Feature: Automation of user management
 
     Examples:
       | email                     |
-      | daffa.virdianto@gmail.com |
+      | daffa.virdianto1@gmail.com |
 
   Scenario Outline: Delete user account
     When I send a delete account request with:
@@ -66,4 +66,4 @@ Feature: Automation of user management
 
     Examples:
       | email                     | password          |
-      | daffa.virdianto@gmail.com | securepassword123 |
+      | daffa.virdianto1@gmail.com | securepassword123 |
