@@ -36,5 +36,5 @@ jobs:
         run: mvn test "-DsuiteXml=src/test/resources/api_suite.xml"
 
       - name: Run Cucumber Test
-        run: mvn tes "-DsuiteXml=src/test/resources/cucumber_suite.xml"
+        run: mvn test "-DsuiteXml=src/test/resources/cucumber_suite.xml"
 
