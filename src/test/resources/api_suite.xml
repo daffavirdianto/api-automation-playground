@@ -1,4 +1,4 @@
-<suite name="APISuite" verbose="5" parallel="true" thread-count="5">
+<suite name="APISuite">
   <test name="API Tests">
     <classes>
       <class name="restassured.RegisterUserTest"/>
